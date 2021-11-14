@@ -1,0 +1,4 @@
+$('#bookmarks').prepend('<%= j render('bookmarks/bookmark', bookmark: @bookmark)%>');
+$('#form_new').html(' ');
+$('#new_button').append('<%= escape_javascript render('bookmarks/new_button') %>')
+$('#notice_bookmark').append('<%= j render('bookmarks/notice') %>')

@@ -1,0 +1,9 @@
+<h1>Bookmark Graphics</h1>
+
+<h2 class="text-center py-4">Type distribution summarized</h2>
+
+<%= pie_chart @bookmark_by_types %>
+
+<div class="container py-5">
+    <%= link_to 'Back', bookmarks_path, class: 'btn btn-outline-dark btn-lg' %>
+</div>

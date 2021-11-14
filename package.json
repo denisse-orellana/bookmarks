@@ -1,0 +1,7 @@
+{
+  "name": "prueba_marcadores",
+  "private": true,
+  "dependencies": {
+    "highcharts": "^9.3.1"
+  }
+}

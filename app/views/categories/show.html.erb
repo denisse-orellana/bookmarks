@@ -1,0 +1,16 @@
+<p>
+    <strong>Name:</strong>
+    <%= @category.name %>
+</p>
+<p>
+    <strong>Is Public?:</strong>
+    <%= @category.visibility %>
+</p>
+<p>
+    <strong>Category:</strong>
+    <%= @category.category_id %>
+</p>
+
+<div class="container py-5">
+    <%= link_to 'Back', categories_path, class: 'btn btn-outline-dark btn-lg' %>
+</div>

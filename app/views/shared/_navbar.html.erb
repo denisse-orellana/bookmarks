@@ -1,0 +1,24 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+  <div class="container">
+
+      <a class="navbar-brand"><%= link_to 'Bookmarks', bookmarks_path %></a> &nbsp;
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse ml-auto" id="navbarNav">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a><%= link_to 'Types', types_path %></a> &nbsp;
+          </li>
+          <li class="nav-item active">
+            <a><%= link_to 'Categories', categories_path %></a> &nbsp;
+          </li>
+          <li class="nav-item active">
+            <a><%= link_to 'Graphic', home_path %></a> &nbsp;
+          </li>
+        </ul>
+      </div>
+      
+  </div>
+</nav>

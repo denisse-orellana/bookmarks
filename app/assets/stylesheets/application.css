@@ -1,0 +1,66 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require font-awesome
+ *= require_tree .
+ *= require_self
+ */
+ 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body { 
+    background: #f8f8ff;
+}
+
+h1 {
+    text-align: center;
+    font-size: 600;
+    font-weight: 600;
+    padding: 0.5em;
+    font-size: 3.5em;
+    color: black;
+}
+
+h5 {
+    text-align: left;
+    font-size: 1.6em;
+    font-weight: bold;
+    color: #383838;
+    padding: 0.3em;
+}
+
+h6 {
+    text-align: left;
+    font-size: 1.3em;
+    font-weight: normal;
+    color: gray;
+    padding: 0.3em;
+    margin-left: 0.8em;
+}
+
+.p-card {
+    font-size: 1.1em;
+    font-weight: normal;
+    color: #404040;
+    padding: 0.3em;
+}
+
+i {
+    color: white;
+}

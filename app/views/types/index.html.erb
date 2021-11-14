@@ -1,0 +1,26 @@
+<h1>Types of Bookmarks</h1>
+
+<table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @types.each do |type| %>
+        <tr>
+            <td><%= type.id %></td>
+            <td><%= type.name %></td>
+            <td><%= link_to type, class: 'btn btn-success' do fa_icon "eye 2x" end  %></td>
+            <td><%= link_to edit_type_path(type), class: 'btn btn-warning' do fa_icon "edit 2x" end  %></td>
+            <td><%= link_to type, method: :delete, data: { confirm: "Are you sure to delete it?" }, class: 'btn btn-danger' do fa_icon "trash 2x" end  %></td>
+        </tr>
+      <% end %>
+    </tbody>
+</table>
+
+<div class="container py-5">
+  <%= link_to 'New type', new_type_path, class: 'btn btn-outline-info btn-lg' %> 
+  <%= link_to 'Back', bookmarks_path, class: 'btn btn-outline-dark btn-lg' %>
+</div>
