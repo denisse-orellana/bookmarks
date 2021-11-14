@@ -42,5 +42,24 @@ rails g controller Categories index
 rails g controller Bookmarks index
 ```
 
+The association was established in the model as it follows:
+
+```ruby
+class Type < ApplicationRecord
+    has_many :bookmarks, dependent: :destroy
+end
+
+class Category < ApplicationRecord  
+  has_many :sub_categories, class_name: "Category", foreign_key: "category_id", dependent: :destroy			
+  belongs_to :main_category, class_name: "Category", foreign_key: "category_id", optional: true	
+  has_many :bookmarks, dependent: :destroy
+end
+
+class Bookmark < ApplicationRecord
+    belongs_to :type
+    belongs_to :category
+end
+```
+
 ## 2. Bookmark CRUD
 
