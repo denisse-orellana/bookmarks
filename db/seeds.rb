@@ -13,7 +13,7 @@ types = ['Video', 'Article', 'Paper', 'Blog', 'Newspaper']
         )
     end
 
-categories = ['Animals', 'Cience', 'Literature', 'Tecnology']
+categories = ['Animals', 'Cience', 'Tecnology', 'Literature']
     categories.each do |category|
         Category.create!(
             name: category,
@@ -25,6 +25,7 @@ subcategories_1 = ['Birds', 'Mammals', 'Fish', 'Reptiles', 'Amphibians']
     subcategories_1.each do |subcategory|
         Category.create!(
             name: subcategory,
+            visibility: [true, false].sample,
             category_id: 1
         )
     end
@@ -33,7 +34,17 @@ subcategories_2 = ['Geology', 'Oceanology', 'Physics', 'Astronomy', 'Botany']
     subcategories_2.each do |subcategory|
         Category.create!(
             name: subcategory,
+            visibility: [true, false].sample,
             category_id: 2
+        )
+    end
+
+subcategories_3 = ['Mechanical', 'Electronic', 'Medical', 'Communications', 'Industrial']
+    subcategories_3.each do |subcategory|
+        Category.create!(
+            name: subcategory,
+            visibility: [true, false].sample,
+            category_id: 3
         )
     end
 

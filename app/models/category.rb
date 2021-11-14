@@ -7,8 +7,6 @@ class Category < ApplicationRecord
   before_update :update_visibility
 
   validates :name, presence: true
-  validates :visibility, presence: true
-  validates :category_id, presence: true
 
   def to_s
     name
