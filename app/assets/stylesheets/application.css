@@ -77,3 +77,15 @@ i {
     text-align: center;
     margin: auto;
 }
+
+.navbar a:link {
+    padding: 1em;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-item a {
+    color: whitesmoke;
+    text-decoration: none;
+}
