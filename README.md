@@ -308,7 +308,7 @@ $('#notice_bookmark').append('<%= j render('bookmarks/notice') %>');
 
 ## 4. Category Endpoint
 
-An endpoint is made to return a JSON with the category data that will includes his subcategories and the bookmarks to which is associated. The route is defined as it follows:
+An endpoint is made to return a JSON with the category data that includes his subcategories and the bookmarks to which is associated. The route is defined as it follows:
 
 ```ruby
 # routes.rb
