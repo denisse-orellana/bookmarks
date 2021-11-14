@@ -3,7 +3,26 @@
 <h2 class="text-center py-4">Type distribution summarized</h2>
 
 <div class="container my-3">
-    <%= pie_chart @bookmark_by_types, donut: true %>
+    <%= pie_chart @bookmark_by_types, donut: true %>  
+</div>
+
+<div class="container p-5">
+    <table class="table">
+        <thead>
+            <tr>
+                <% @bookmark_by_types.keys.each do |key| %> 
+                    <th scope="col"><%= key %></th>
+                <% end %>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <% @bookmark_by_types.values.each do |value| %> 
+                    <td><%= value %></td>
+                <% end %>
+            </tr>
+        </tbody>
+    </table>
 </div>
 
 <div class="container py-5">
