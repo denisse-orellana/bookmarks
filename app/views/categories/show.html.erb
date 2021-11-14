@@ -11,6 +11,11 @@
     <%= @category.category_id %>
 </p>
 
+<div class="container py-3">
+    <h2>Category API </h2>
+    <%= link_to 'Endpoint', endpoint_path(@category), class: 'btn btn-outline-info btn-lg' %>
+</div>
+
 <div class="container py-5">
     <%= link_to 'Back', categories_path, class: 'btn btn-outline-dark btn-lg' %>
 </div>
