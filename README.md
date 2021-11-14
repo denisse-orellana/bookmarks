@@ -319,7 +319,7 @@ get '/endpoint/:id', to: 'categories#endpoint', as: 'endpoint'
 From the controller, the method endpoint is created including the sub categories and bookmarks of the category as:
 
 ```ruby
-# bookmarks_controller.rb
+# categories_controller.rb
 
 def endpoint
     @category = Category.find(params[:id])
