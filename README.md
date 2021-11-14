@@ -8,7 +8,7 @@ This project present a Bookmark app done from scratch implementing AJAX (Asynchr
   * [Ruby Gems](#ruby-gems)
   * [1. Model diagram](#1-model-diagram)
     + [1.1. Creating the models](#11-creating-the-models)
-  * c2. Category and Type CRUD](#2-category-and-type-crud)
+  * [2. Category and Type CRUD](#2-category-and-type-crud)
   * [3. Bookmark AJAX CRUD](#3-bookmark-ajax-crud)
     + [3.1. The Routes](#31-the-routes)
     + [3.2. Index](#32-index)
