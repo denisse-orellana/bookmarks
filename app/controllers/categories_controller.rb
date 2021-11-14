@@ -50,7 +50,6 @@ class CategoriesController < ApplicationController
     end     
 
     def endpoint
-        @category = Category.find(params[:id])
         render json: @category.to_json(include: [:sub_categories, :bookmarks])
     end
     

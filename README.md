@@ -7,8 +7,8 @@ This project present a Bookmark app done from scratch implementing AJAX (Asynchr
   * [Ruby and Rails Version](#ruby-and-rails-version)
   * [Ruby Gems](#ruby-gems)
   * [1. Model diagram](#1-model-diagram)
-    + [1.1. Defining the model](#11-defining-the-model)
-  * [2. Category and Type CRUD](#2-category-and-type-crud)
+    + [1.1. Creating the models](#11-creating-the-models)
+  * c2. Category and Type CRUD](#2-category-and-type-crud)
   * [3. Bookmark AJAX CRUD](#3-bookmark-ajax-crud)
     + [3.1. The Routes](#31-the-routes)
     + [3.2. Index](#32-index)
@@ -44,7 +44,7 @@ gem "font-awesome-rails", "~> 4.7"
 
 The image shows that Category and Type share a has many association with Bookmarks. At the same time, Category works as reflexive association that will contain new categories inside itself, called subcategories.
 
-### 1.1. Defining the model
+### 1.1. Creating the models
 
 The models are implemented as it is describe next:
 
@@ -313,16 +313,17 @@ An endpoint is made to return a JSON with the category data that includes his su
 ```ruby
 # routes.rb
 
-get '/endpoint/:id', to: 'categories#endpoint', as: 'endpoint'
+get '/categories/:id/endpoint', to: 'categories#endpoint', as: 'endpoint'
 ```
 
-From the controller, the method endpoint is created including the sub categories and bookmarks of the category as:
+From the controller, the method endpoint is created to render this JSON as:
 
 ```ruby
 # categories_controller.rb
 
+before_action :set_category, only: [:endpoint]
+
 def endpoint
-    @category = Category.find(params[:id])
     render json: @category.to_json(include: [:sub_categories, :bookmarks])
 end
 ```
@@ -333,7 +334,7 @@ With the help of the Faker gem, the database is populated in the ```seed.rb``` f
 
 ## 6. Bookmark Graphic
 
-A new controller Home is made to display the graphic:
+A new controller Home is made to display the data:
 
 ```console
 rails g controller Home index
