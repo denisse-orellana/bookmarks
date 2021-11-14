@@ -34,5 +34,13 @@ rails g model Category name visibility:boolean category:references
 rails g model Bookmark title url type:references category:references
 ```
 
+The controllers are also implemented as:
+
+```console
+rails g controller Types index
+rails g controller Categories index
+rails g controller Bookmarks index
+```
+
 ## 2. Bookmark CRUD
 
