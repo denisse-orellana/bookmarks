@@ -29,7 +29,7 @@ class BookmarksController < ApplicationController
                 format.js { render nothing: true }
                 flash.now[:notice] = 'Bookmark created!'
             else
-                format.html { redirect_to root_path, notice: 'Bookmark could not be updated' }
+                flash.now[:notice] = 'Bookmark could not be created'
             end
         end
     end
@@ -40,7 +40,7 @@ class BookmarksController < ApplicationController
                 format.js { render layout: false }
                 flash.now[:notice] = 'Bookmark updated!'
             else
-                format.html { redirect_to root_path, notice: 'Bookmark could not be updated'}
+                flash.now[:notice] = 'Bookmark could not be updated'
             end
         end
     end
@@ -51,7 +51,7 @@ class BookmarksController < ApplicationController
                 format.js { render nothing: false }
                 flash.now[:notice] = 'Bookmark deleted!'
             else
-                format.html { redirect_to root_path, notice: 'Bookmark could not be deleted'}
+                flash.now[:notice] = 'Bookmark could not be deleted'
             end
         end
     end    
