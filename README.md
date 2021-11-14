@@ -283,7 +283,7 @@ In the controller:
 ```ruby
 # bookmarks_controller.rb
 
-before_action :set_bookmark, only: [:show, :edit, :update]
+before_action :set_bookmark, only: [:show, :edit, :update, :destroy]
 
 def destroy
     respond_to do |format|
