@@ -26,7 +26,8 @@ class BookmarksController < ApplicationController
         sleep 2
         respond_to do |format|
             if @bookmark.save!
-                format.js { render nothing: true, notice: 'Bookmark created!' }
+                format.js { render nothing: true }
+                flash.now[:notice] = 'Bookmark created!'
             else
                 format.html { redirect_to root_path, notice: 'Bookmark could not be updated' }
             end
@@ -36,7 +37,8 @@ class BookmarksController < ApplicationController
     def update
         respond_to do |format|
             if @bookmark.update!(bookmark_params)
-                format.js { render layout: false, notice: 'Bookmark updated!' }
+                format.js { render layout: false }
+                flash.now[:notice] = 'Bookmark updated!'
             else
                 format.html { redirect_to root_path, notice: 'Bookmark could not be updated'}
             end
@@ -46,7 +48,8 @@ class BookmarksController < ApplicationController
     def destroy
         respond_to do |format|
             if @bookmark.destroy!
-                format.js { render nothing: false, notice: 'Bookmark deleted!' }
+                format.js { render nothing: false }
+                flash.now[:notice] = 'Bookmark deleted!'
             else
                 format.html { redirect_to root_path, notice: 'Bookmark could not be deleted'}
             end

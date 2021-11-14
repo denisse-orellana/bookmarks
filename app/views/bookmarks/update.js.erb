@@ -1,2 +1,3 @@
-$('#form_new').html(' ')
-$('#bookmark-<% @bookmark.id %>').replaceWith('<%= j render('bookmarks/bookmark', bookmark: @bookmark) %>')
+$('#form_new').html(' ');
+$('#bookmark-<% @bookmark.id %>').replaceWith('<%= j render('bookmarks/bookmark', bookmark: @bookmark) %>');
+$('#notice_bookmark').append('<%= j render('bookmarks/notice') %>');
