@@ -2,12 +2,12 @@
 
 <h2 class="text-center py-4">Type distribution summarized</h2>
 
-<div class="container my-3">
+<div class="container my-3 pie-chart">
     <%= pie_chart @bookmark_by_types, donut: true %>  
 </div>
 
-<div class="container p-5">
-    <table class="table">
+<div class="container p-3">
+    <table class="table table-chart">
         <thead>
             <tr>
                 <% @bookmark_by_types.keys.each do |key| %> 

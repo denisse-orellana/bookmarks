@@ -64,3 +64,16 @@ h6 {
 i {
     color: white;
 }
+
+.pie-chart {
+    font-size: 1.3em; 
+    font-weight: lighter;
+}
+
+.table-chart {
+    width: 35%; 
+    font-size: 1.3em; 
+    font-weight: lighter;
+    text-align: center;
+    margin: auto;
+}
