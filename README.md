@@ -245,6 +245,7 @@ In the template js:
 // bookmarks/edit.js.erb
 
 $('#form_new').html('<%= escape_javascript render('bookmarks/form') %>')
+$('#new_button').html(' ');
 ```
 ### 3.7. Update 
 
